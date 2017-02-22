@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  heroku:
+    build: .
+    entrypoint: sleep 6000000
+    volumes:
+      - ./project/:/workspace/
+      - root:/root/
+
+volumes:
+  root:
+    driver: local
