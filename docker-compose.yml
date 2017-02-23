@@ -2,7 +2,6 @@ version: '3'
 
 services:
   heroku:
-    build: .
     image: nouchka/heroku:latest
     stdin_open: true
     tty: true

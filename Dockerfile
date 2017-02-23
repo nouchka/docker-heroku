@@ -1,7 +1,7 @@
 FROM debian:jessie
 MAINTAINER Jean-Avit Promis "docker@katagena.com"
 LABEL org.label-schema.vcs-url="https://github.com/nouchka/docker-heroku"
-LABEL version="1.0"
+LABEL version="latest"
 
 RUN apt-get update --fix-missing && \
 	apt-get update && \

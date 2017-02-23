@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+script:
+  - docker-compose -f docker-compose.test.yml up|grep "heroku-cli"
+  - docker-compose -f docker-compose.test.yml up|grep "Composer version"
+
+notifications:
+  email: docker@katagena.com
