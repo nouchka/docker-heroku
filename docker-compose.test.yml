@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  heroku:
+  sut:
     build: .
     image: nouchka/heroku:latest
     entrypoint: bash -c "heroku version && composer --version"
