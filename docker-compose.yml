@@ -1,9 +1,11 @@
-version: '2'
+version: '3'
 
 services:
   heroku:
     build: .
-    entrypoint: sleep 6000000
+    image: nouchka/heroku:latest
+    stdin_open: true
+    tty: true
     volumes:
       - ./project/:/workspace/
       - root:/root/
@@ -11,3 +13,4 @@ services:
 volumes:
   root:
     driver: local
+
