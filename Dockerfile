@@ -5,7 +5,7 @@ LABEL version="latest"
 
 RUN apt-get update --fix-missing && \
 	apt-get update && \
-	apt-get install -y -q git wget php5
+	apt-get install -y -q git wget php5 php5-mysql
 
 RUN wget https://getcomposer.org/installer -O - -q | php -- --install-dir=/usr/local/bin --filename=composer
 
