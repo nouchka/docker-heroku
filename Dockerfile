@@ -19,5 +19,7 @@ RUN export uid=1000 gid=1000 && \
     echo "developer:x:${uid}:" >> /etc/group && \
     chown ${uid}:${gid} -R /home/developer
 
-WORKDIR /workspace/
+WORKDIR /home/developer/workspace/
+USER developer
+
 ENTRYPOINT [ "heroku" ]
