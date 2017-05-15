@@ -16,7 +16,7 @@
 * latest (ship with php5)
 
 # Image
-Install heroku cli with php composer. Keep credentials in a separate volume.
+Install heroku cli with php composer. Keep credentials in a separate volume. Use make install to setup the command.
 
 # Use
 
