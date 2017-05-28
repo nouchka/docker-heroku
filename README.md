@@ -6,10 +6,6 @@
 [![](https://images.microbadger.com/badges/version/nouchka/heroku.svg)](https://microbadger.com/images/nouchka/heroku "Get your own version badge on microbadger.com")
 [![Docker Automated buil](https://img.shields.io/docker/automated/nouchka/heroku.svg)](https://hub.docker.com/r/nouchka/heroku/)
 [![Build Status](https://travis-ci.org/nouchka/docker-heroku.svg?branch=master)](https://travis-ci.org/nouchka/docker-heroku)
-<!---
-[![Docker Stars](https://img.shields.io/docker/stars/nouchka/docker-heroku.svg)](https://hub.docker.com/r/nouchka/heroku/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/nouchka/docker-heroku.svg)]()
---->
 
 # Versions
 
