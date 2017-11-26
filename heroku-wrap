@@ -1,0 +1,12 @@
+#!/bin/bash
+
+USER_ID=`stat --format %u .`
+USER_GID=`stat --format %g .`
+
+CURRENT_USER_ID=`sudo -u developer bash -c 'id -u'`
+CURRENT_USER_GID=`sudo -u developer bash -c 'id -g'`
+
+[ "$CURRENT_USER_ID" = "$USER_ID" ] || usermod -u $USER_ID developer
+[ "$CURRENT_USER_GID" = "$USER_GID" ] || groupmod -g $USER_GID developer
+
+sudo -u developer heroku $@
