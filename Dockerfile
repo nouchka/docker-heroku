@@ -5,14 +5,12 @@ LABEL version="latest"
 
 RUN apt-get update --fix-missing && \
 	apt-get update && \
-	apt-get install -y -q git wget apache2 php5 php5-mysql php5-json php5-fpm libapache2-mod-php5 sudo && \
+	apt-get install -y -q git wget apache2 php5 php5-mysql php5-json php5-fpm libapache2-mod-php5 sudo curl && \
 	ln -s /usr/sbin/php5-fpm /usr/sbin/php-fpm && \
 	ln -s /usr/sbin/apache2 /usr/sbin/httpd
 
 RUN wget https://getcomposer.org/installer -O - -q | php -- --install-dir=/usr/local/bin --filename=composer && \
-	wget https://cli-assets.heroku.com/branches/stable/heroku-linux-amd64.tar.gz -O heroku.tar.gz && \
-	tar -xvzf heroku.tar.gz -C /usr/local/lib && \
-	/usr/local/lib/heroku/install
+	curl https://cli-assets.heroku.com/install.sh | sh
 
 RUN export uid=1000 gid=1000 && \
     mkdir -p /home/developer && \
