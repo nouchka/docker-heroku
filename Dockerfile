@@ -1,12 +1,12 @@
-FROM debian:jessie
+FROM debian:sid-slim
 MAINTAINER Jean-Avit Promis "docker@katagena.com"
 LABEL org.label-schema.vcs-url="https://github.com/nouchka/docker-heroku"
 LABEL version="latest"
 
 RUN apt-get update --fix-missing && \
 	apt-get update && \
-	apt-get install -y -q git wget apache2 php5 php5-mysql php5-json php5-fpm libapache2-mod-php5 sudo curl && \
-	ln -s /usr/sbin/php5-fpm /usr/sbin/php-fpm && \
+	apt-get install -y -q git wget apache2 php7.3 php7.3-mysql php7.3-json php7.3-fpm php7.3-xml libapache2-mod-php7.3 sudo curl unzip && \
+	ln -s /usr/sbin/php7.3-fpm /usr/sbin/php-fpm && \
 	ln -s /usr/sbin/apache2 /usr/sbin/httpd
 
 RUN wget https://getcomposer.org/installer -O - -q | php -- --install-dir=/usr/local/bin --filename=composer && \
