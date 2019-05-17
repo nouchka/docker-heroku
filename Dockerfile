@@ -5,7 +5,7 @@ LABEL version="latest"
 
 RUN apt-get update --fix-missing && \
 	apt-get update && \
-	apt-get install -y -q git wget apache2 php7.3 php7.3-mysql php7.3-json php7.3-fpm php7.3-xml php7.3-mbstring libapache2-mod-php7.3 sudo curl unzip && \
+	apt-get install -y -q php php-mysql php-json php-fpm php-xml php-mbstring php-curl apache2 libapache2-mod-php sudo curl unzip git wget && \
 	ln -s /usr/sbin/php7.3-fpm /usr/sbin/php-fpm && \
 	ln -s /usr/sbin/apache2 /usr/sbin/httpd
 
